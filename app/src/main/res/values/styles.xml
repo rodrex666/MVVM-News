@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="NewsRodrigoStyle">
+
+        <item name="android:layout_marginEnd">@dimen/layout_margin_small</item>
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:maxLines">3</item>
+
+        <item name="android:paddingTop">@dimen/small_padding</item>
+        <item name="android:paddingRight">@dimen/small_padding</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+</resources>
