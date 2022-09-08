@@ -24,6 +24,7 @@ import com.example.newsapprodrigo.databinding.FragmentSearchNewsBinding
 
 import com.example.newsapprodrigo.ui.NewsViewModel
 import com.example.newsapprodrigo.util.Constans
+import com.example.newsapprodrigo.util.Constans.Companion.SEARCH_NEWS_TIME_DELAY
 import com.example.newsapprodrigo.util.Resource
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.MainScope
@@ -55,7 +56,7 @@ class SearchNewsFragment: Fragment(R.layout.fragment_search_news) {
         binding.etSearch.addTextChangedListener{ editable->
             job?.cancel()
             job = MainScope().launch {
-                delay(500L)
+                delay(SEARCH_NEWS_TIME_DELAY)
                 editable?.let {
                     if(editable.toString().isNotEmpty()){
                         viewModel.searchNews(editable.toString())

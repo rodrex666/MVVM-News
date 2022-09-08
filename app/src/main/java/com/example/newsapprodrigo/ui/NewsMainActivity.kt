@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuInflater
+import android.view.MenuItem
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.core.view.get
@@ -40,6 +41,7 @@ class NewsMainActivity : AppCompatActivity() {
         binding = DataBindingUtil.setContentView(this,R.layout.news_main_activity)
         binding.lifecycleOwner = this
         initView()
+
     }
     private fun initView() {
         drawerLayout = binding.drawerLayout
@@ -54,6 +56,11 @@ class NewsMainActivity : AppCompatActivity() {
         val inflater: MenuInflater = menuInflater
         inflater.inflate(R.menu.over_menu,menu)
         return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return NavigationUI.onNavDestinationSelected(item!!,navigationController!!)||
+                return super.onOptionsItemSelected(item)
     }
 
     private fun optionsDrawerMenuSelected(){
